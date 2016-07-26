@@ -4,9 +4,15 @@
 
 #include <stdio.h>
 #include "staticlibtest.h"
+#include <freerdp/version.h>
+
 
 int testfunction1(char * parameter1, int parameter2) {
     int test;
+    char * tst;
+
+    tst = freerdp_get_version_string();
+
     for (test = 0; test < parameter2; ++test) {
         fprintf(stdout, "para 1 was %s, run is %d, para 2 was %d\n", parameter1,
                 test, parameter2);
